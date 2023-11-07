@@ -10,7 +10,7 @@ const Contact = () => {
                                 Contact us
                             </h2>
                             <p className="mb-6">
-                                <strong> We'd Love to Hear From You!</strong>
+                                <strong> We&apos;d Love to Hear From You!</strong>
                                 <br />
                                 <span>
                                     Have questions, inquiries, or feedback? Get
@@ -90,7 +90,7 @@ const Contact = () => {
                                         type="checkbox"
                                         value=""
                                         id="exampleCheck96"
-                                        checked
+                                        defaultChecked={true}
                                     />
                                     <label
                                         className="inline-block pl-[0.15rem] hover:cursor-pointer"

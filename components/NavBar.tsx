@@ -1,9 +1,9 @@
 import * as React from "react";
 import Link from "next/link";
 // import Logo from "../../assets/imgs/logos/light_logo.png";
-import { AiOutlineBell } from "react-icons/ai";
-import { BsSun } from "react-icons/bs";
-import { LiaUserCircle } from "react-icons/lia";
+import {AiOutlineBell} from "react-icons/ai";
+import {BsSun} from "react-icons/bs";
+import {LiaUserCircle} from "react-icons/lia";
 
 const links = [
     {
@@ -25,7 +25,8 @@ const links = [
 
 const Navbar = () => {
     return (
-        <nav className="py-4 fixed top-0 w-full z-30 md:bg-opacity-90 transition duration-300 ease-in-outs custom-filter">
+        <nav
+            className="py-4 fixed top-0 w-full z-30 md:bg-opacity-90 transition duration-300 ease-in-outs custom-filter">
             <div className="container mx-auto px-6">
                 <div className="mx-auto">
                     <div className="flex items-center gap-5 justify-between w-full">
@@ -48,15 +49,15 @@ const Navbar = () => {
 
                             <ul className="flex space-x-5">
                                 <Link href="">
-                                    <BsSun className="text-2xl" />
+                                    <BsSun className="text-2xl"/>
                                 </Link>
 
                                 <Link href="">
-                                    <AiOutlineBell className="text-2xl" />
+                                    <AiOutlineBell className="text-2xl"/>
                                 </Link>
 
                                 <Link href="">
-                                    <LiaUserCircle className="text-2xl" />
+                                    <LiaUserCircle className="text-2xl"/>
                                 </Link>
                             </ul>
                         </div>
