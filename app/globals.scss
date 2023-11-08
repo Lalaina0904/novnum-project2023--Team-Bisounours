@@ -3,18 +3,43 @@
 @tailwind utilities;
 
 @font-face {
-    font-family: "Queenside";
-    src: url(/fonts/QueensidesMedium-x30zV.ttf);
+  font-family: "Queenside";
+  src: url(/fonts/QueensidesMedium-x30zV.ttf);
 }
 
 * {
-    font-family: "Queenside", sans-serif;
+  font-family: "Queenside", sans-serif;
 }
 
 @layer utilities {
-    .custom-filter {
-        -webkit-backdrop-filter: saturate(180%) blur(5px) !important;
-        backdrop-filter: saturate(180%) blur(5px) !important;
-        background-color: #c8d9ed48 !important;
-    }
+  .custom-filter {
+    -webkit-backdrop-filter: saturate(180%) blur(5px) !important;
+    backdrop-filter: saturate(180%) blur(5px) !important;
+    background-color: #c8d9ed48 !important;
+  }
 }
+
+.bLEAHt::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  height: 8px;
+  background: linear-gradient(
+    90deg,
+    rgb(157, 169, 243) 0%,
+    rgb(156, 199, 242) 100%
+  );
+}
+
+// .heroImg{
+//     width: 500px !important;
+// }
+
+// @media (max-width: 1024px) {
+//     .pic{
+//         width: 100px !important;
+//     }
+//  }
