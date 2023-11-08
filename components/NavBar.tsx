@@ -1,6 +1,5 @@
 import * as React from "react";
 import Link from "next/link";
-// import Logo from "../../assets/imgs/logos/light_logo.png";
 import {AiOutlineBell} from "react-icons/ai";
 import {BsSun} from "react-icons/bs";
 import {LiaUserCircle} from "react-icons/lia";
