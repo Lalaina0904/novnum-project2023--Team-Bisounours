@@ -1,59 +1,47 @@
 // @flow
 import * as React from "react";
+import { Briefcase, BookText, MessagesSquare, Search, LogOut, FileText } from "lucide-react";
 import Image from "next/image";
-import { Briefcase, BookText, MessagesSquare, Search } from "lucide-react";
 
 const Page = () => {
   return (
-    <div className="relative flex h-full min-h-screen">
-      <div className="custom-filter fixed z-50 h-screen w-48 bg-opacity-100 py-6">
-        <div className="flex items-center gap-4 px-4">
-          <div className="w-10">
-            <Image
-              className="h-auto w-full"
-              width={200}
-              height={200}
-              src={"/assets/logoDark.svg"}
-              alt={""}
-            />
-          </div>
-          <p className="text-xl font-bold">Hayra</p>
-        </div>
-        <div className="my-16 flex flex-col border-b border-t font-bold text-neutral-700">
-          <div className="flex cursor-pointer items-center gap-4 border-l-4 border-transparent p-4 text-sm hover:border-neutral-800 hover:bg-white">
-            <Briefcase size={20} />
-            <p>Resources</p>
-          </div>
-          <div className="flex cursor-pointer items-center gap-4 border-l-4 border-transparent p-4 text-sm hover:border-neutral-800 hover:bg-white">
-            <BookText size={20} />
-            <p>Blogs</p>
-          </div>
-          <div className="flex cursor-pointer items-center gap-4 border-l-4 border-transparent p-4 text-sm hover:border-neutral-800 hover:bg-white">
-            <MessagesSquare size={20} />
-            <p>Forums</p>
-          </div>
-        </div>
-      </div>
-      <div className="relative ml-48 h-[300vh] grow py-4">
-        <div className="custom-filter fixed left-0 top-0 flex w-full justify-between bg-white py-6 pl-48">
-          <div className="relative mx-6 flex w-96 items-center overflow-hidden rounded-md border bg-white px-2 text-gray-600">
-            <input
-              className="h-10 w-full text-sm focus:outline-none"
-              type="search"
-              name="search"
-              placeholder="Search"
-            />
-            <div className="text-neutral-400">
-              <Search />
-            </div>
-          </div>
-          <div>
-            <p>toky</p>
-          </div>
-        </div>
-      </div>
+    <div className="relative grid grid-cols-2 gap-3">
+      <Resource/>
+      <Resource/>
+      <Resource/>
+      <Resource/>
+      <Resource/>
     </div>
   );
 };
+
+function Resource() {
+  return (
+    <div className="flex gap-3 max-w-3xl h-min p-2 hover:bg-neutral-100 cursor-pointer rounded-md border">
+      <div className="aspect-video bg-blue-400 w-64 relative">
+        <Image objectFit={"cover"} fill src={"https://d2r55xnwy6nx47.cloudfront.net/uploads/2022/02/Andre-Oort-520x292-520x292.jpg"} alt={""}/>
+      </div>
+      <div className="flex flex-col">
+        <div className="flex text-neutral-400 items-center justify-between">
+          <h2 className="font-bold text-lg text-neutral-800">Number Theory</h2>
+          <FileText size={14}/>
+        </div>
+        <p className="text-sm text-neutral-600">
+          Number theory is a branch of mathematics that deals with the properties and relationships
+        </p>
+       <div className="flex justify-between items-end py-1">
+         <div className="flex flex-wrap gap-1 mt-auto">
+           <span className="bg-blue-50 p-1 text-xs rounded-md flex items-center justify-center leading-3">Math</span>
+           <span className="bg-blue-50 p-1 text-xs rounded-md flex items-center justify-center leading-3">NumberTheory</span>
+           <span className="bg-blue-50 p-1 text-xs rounded-md flex items-center justify-center leading-3">MathNerd</span>
+         </div>
+         <div className="text-neutral-400 text-xs underline">
+           By noface , <span className="italic">12-02-2025</span>
+         </div>
+       </div>
+      </div>
+    </div>
+  )
+}
 
 export default Page;
