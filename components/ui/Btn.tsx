@@ -10,7 +10,7 @@ const Btn = ({ children, roundedMd, btnClass }: BtnProps) => {
   return (
     <div>
       <button
-        className={`${btnClass} px-5 py-1 ${
+        className={`${btnClass} px-5 py-3 ${
           roundedMd ? "rounded-md" : "rounded-[3px]"
         }`}
       >

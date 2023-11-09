@@ -61,6 +61,18 @@
   }
 }
 
-// .hIbMNH {
-//   background: url(/images/elements.jpg) no-repeat center center / cover;
-// }
+.swiper-button-prev,
+.swiper-button-next {
+  background-color: #000;
+  width: 2rem !important;
+  height: 2rem !important;
+  border-radius: 100%;
+  &:hover {
+    opacity: 1;
+  }
+  &::before,
+  &::after {
+    font-size: 1.2rem !important;
+    color: #fff;
+  }
+}

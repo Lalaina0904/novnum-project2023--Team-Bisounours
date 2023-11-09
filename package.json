@@ -12,12 +12,14 @@
   },
   "dependencies": {
     "@prisma/client": "^5.5.2",
+    "framer-motion": "^10.16.4",
     "lucide-react": "^0.292.0",
     "next": "14.0.1",
     "react": "^18",
     "react-dom": "^18",
     "react-icons": "^4.11.0",
-    "sass": "^1.69.5"
+    "sass": "^1.69.5",
+    "swiper": "^11.0.4"
   },
   "devDependencies": {
     "@types/node": "^20",

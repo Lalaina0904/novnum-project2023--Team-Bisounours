@@ -1,7 +1,7 @@
 import Navbar from "@/components/NavBar";
 import Heading from "@/components/home/Heading";
 import Categories from "@/components/home/Categories";
-import Testimonial from "@/components/home/Testimonial";
+import Content from "@/components/home/Content";
 import Contact from "@/components/home/Contact";
 import Footer from "@/components/Footer";
 
@@ -11,7 +11,7 @@ export default function Home() {
       <Navbar />
       <Heading />
       <Categories />
-      <Testimonial />
+      <Content />
       <Contact />
       <Footer />
     </div>
