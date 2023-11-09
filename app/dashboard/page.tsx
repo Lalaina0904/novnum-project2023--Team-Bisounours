@@ -1,53 +1,59 @@
 // @flow
-import * as React from 'react';
-import {Briefcase, BookText, MessagesSquare, Search} from "lucide-react";
+import * as React from "react";
 import Image from "next/image";
+import { Briefcase, BookText, MessagesSquare, Search } from "lucide-react";
 
 const Page = () => {
-    return (
-        <div className="h-full min-h-screen flex relative">
-            <div className="fixed h-screen w-48 custom-filter bg-opacity-100 py-6 z-50">
-                <div className="px-4 flex items-center gap-4">
-                     <div className="w-10">
-                         <Image className="w-full h-auto" width={200} height={200} src={"/assets/logoDark.svg"} alt={""}/>
-                     </div>
-                    <p className="font-bold text-xl">Hayra</p>
-                </div>
-                <div className="font-bold text-neutral-700 flex flex-col border-t border-b my-16">
-                    <div className="text-sm flex gap-4 items-center p-4 cursor-pointer hover:bg-white border-transparent border-l-4 hover:border-neutral-800">
-                        <Briefcase size={20}/>
-                        <p>Resources</p>
-                    </div>
-                    <div className="text-sm flex gap-4 items-center p-4 cursor-pointer hover:bg-white border-transparent border-l-4 hover:border-neutral-800">
-                        <BookText  size={20}/>
-                        <p>Blogs</p>
-                    </div>
-                    <div className="text-sm flex gap-4 items-center p-4 cursor-pointer hover:bg-white border-transparent border-l-4 hover:border-neutral-800">
-                        <MessagesSquare  size={20}/>
-                        <p>Forums</p>
-                    </div>
-                </div>
-            </div>
-            <div className="grow h-[300vh] ml-48 py-4 relative">
-                <div className="pl-48 fixed w-full flex left-0 top-0 py-6 custom-filter bg-white justify-between">
-                    <div className="px-2 bg-white mx-6 relative text-gray-600 border rounded-md w-96 overflow-hidden flex items-center">
-                        <input
-                            className="w-full h-10 text-sm focus:outline-none"
-                            type="search"
-                            name="search"
-                            placeholder="Search"
-                        />
-                        <div className="text-neutral-400">
-                            <Search/>
-                        </div>
-                    </div>
-                    <div>
-                        <p>toky</p>
-                    </div>
-                </div>
-            </div>
+  return (
+    <div className="relative flex h-full min-h-screen">
+      <div className="custom-filter fixed z-50 h-screen w-48 bg-opacity-100 py-6">
+        <div className="flex items-center gap-4 px-4">
+          <div className="w-10">
+            <Image
+              className="h-auto w-full"
+              width={200}
+              height={200}
+              src={"/assets/logoDark.svg"}
+              alt={""}
+            />
+          </div>
+          <p className="text-xl font-bold">Hayra</p>
         </div>
-    );
+        <div className="my-16 flex flex-col border-b border-t font-bold text-neutral-700">
+          <div className="flex cursor-pointer items-center gap-4 border-l-4 border-transparent p-4 text-sm hover:border-neutral-800 hover:bg-white">
+            <Briefcase size={20} />
+            <p>Resources</p>
+          </div>
+          <div className="flex cursor-pointer items-center gap-4 border-l-4 border-transparent p-4 text-sm hover:border-neutral-800 hover:bg-white">
+            <BookText size={20} />
+            <p>Blogs</p>
+          </div>
+          <div className="flex cursor-pointer items-center gap-4 border-l-4 border-transparent p-4 text-sm hover:border-neutral-800 hover:bg-white">
+            <MessagesSquare size={20} />
+            <p>Forums</p>
+          </div>
+        </div>
+      </div>
+      <div className="relative ml-48 h-[300vh] grow py-4">
+        <div className="custom-filter fixed left-0 top-0 flex w-full justify-between bg-white py-6 pl-48">
+          <div className="relative mx-6 flex w-96 items-center overflow-hidden rounded-md border bg-white px-2 text-gray-600">
+            <input
+              className="h-10 w-full text-sm focus:outline-none"
+              type="search"
+              name="search"
+              placeholder="Search"
+            />
+            <div className="text-neutral-400">
+              <Search />
+            </div>
+          </div>
+          <div>
+            <p>toky</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 };
 
 export default Page;

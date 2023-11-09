@@ -1,9 +1,10 @@
 import "./globals.scss";
 import React from "react";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-
-const inter = Inter({ subsets: ["latin"] });
+import Navbar from "@/components/navbar/NavBar";
+import { Toaster } from "@/components/ui/toaster";
+import { ThemeProvider } from "@/components/theme-provider";
+import Provider from "@/context/session";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -17,7 +18,20 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="min-h-full">
-      <body className={"min-h-screen"}>{children}</body>
+      <body className={"min-h-screen"}>
+        <ThemeProvider
+          enableSystem
+          attribute="class"
+          defaultTheme="system"
+          disableTransitionOnChange
+        >
+          <Provider>
+            <Navbar />
+            {children}
+            <Toaster />
+          </Provider>
+        </ThemeProvider>
+      </body>
     </html>
   );
 }
