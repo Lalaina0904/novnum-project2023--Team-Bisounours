@@ -7,8 +7,18 @@
   src: url(/fonts/QueensidesMedium-x30zV.ttf);
 }
 
+@font-face {
+  font-family: "Satoshi";
+  src: url(/fonts/Satoshi-Regular.otf);
+}
+
 * {
-  font-family: "Queenside", sans-serif;
+  font-family: "Satoshi", sans-serif;
+}
+
+.title,
+.subtitle {
+  font-family: "Queenside", sans-serif !important;
 }
 
 @layer utilities {
@@ -19,27 +29,38 @@
   }
 }
 
-.bLEAHt::before {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  right: 0px;
-  height: 8px;
-  background: linear-gradient(
-    90deg,
-    rgb(157, 169, 243) 0%,
-    rgb(156, 199, 242) 100%
-  );
+.bLEAHt {
+  background: #e6f7ff;
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    height: 8px;
+    background: linear-gradient(
+      90deg,
+      rgb(175 213 232) 0%,
+      rgb(88 148 184) 100%
+    );
+  }
 }
 
-// .heroImg{
-//     width: 500px !important;
-// }
+.fGUYkB {
+  background: #fff1de;
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    height: 8px;
+    background: linear-gradient(90deg, #ffe9cc 0%, #ffc6ac 100%);
+  }
+}
 
-// @media (max-width: 1024px) {
-//     .pic{
-//         width: 100px !important;
-//     }
-//  }
+// .hIbMNH {
+//   background: url(/images/elements.jpg) no-repeat center center / cover;
+// }
