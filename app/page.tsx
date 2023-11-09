@@ -5,14 +5,13 @@ import Contact from "@/components/home/Contact";
 import Footer from "@/components/Footer";
 
 export default function Home() {
-  return (
-    <div>
-      <Navbar />
-      <Heading />
-      <Categories />
-      <Content />
-      <Contact />
-      <Footer />
-    </div>
-  );
+    return (
+      <div>
+        <Heading />
+        <Categories />
+        <Content />
+        <Contact />
+        <Footer />
+      </div>
+    );
 }

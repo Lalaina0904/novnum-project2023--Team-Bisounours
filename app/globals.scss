@@ -55,8 +55,19 @@
     src: url(/fonts/QueensidesMedium-x30zV.ttf);
   }
 
+  @font-face {
+    font-family: "Satoshi";
+    src: url(/fonts/Satoshi-Regular.otf);
+  }
+
   * {
     @apply border-border;
+    font-family: "Satoshi", sans-serif;
+  }
+  
+  .title,
+  .subtitle {
+    font-family: "Queenside", sans-serif !important;
   }
 
   body {
@@ -116,4 +127,5 @@
     font-size: 1.2rem !important;
     color: #fff;
   }
+}
 }
