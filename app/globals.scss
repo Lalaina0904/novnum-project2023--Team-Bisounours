@@ -2,15 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://api.fontshare.com/v2/css?f[]=satoshi@900,700,500,301,701,300,501,401,901,400&display=swap');
-
 @font-face {
     font-family: "Queenside";
     src: url(/fonts/QueensidesMedium-x30zV.ttf);
 }
 
 * {
-    //font-family: "Queenside", sans-serif;
+    font-family: "Queenside", sans-serif;
 }
 
 @layer utilities {
@@ -23,8 +21,4 @@
 
 body::-webkit-scrollbar {
     display: none;
-}
-
-body {
-    font-family: 'Satoshi', sans-serif;
 }
