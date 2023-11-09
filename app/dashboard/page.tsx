@@ -1,53 +1,47 @@
 // @flow
-import * as React from 'react';
-import {Briefcase, BookText, MessagesSquare, Search} from "lucide-react";
+import * as React from "react";
+import { Briefcase, BookText, MessagesSquare, Search, LogOut, FileText } from "lucide-react";
 import Image from "next/image";
 
 const Page = () => {
-    return (
-        <div className="h-full min-h-screen flex relative">
-            <div className="fixed h-screen w-48 custom-filter bg-opacity-100 py-6 z-50">
-                <div className="px-4 flex items-center gap-4">
-                     <div className="w-10">
-                         <Image className="w-full h-auto" width={200} height={200} src={"/assets/logoDark.svg"} alt={""}/>
-                     </div>
-                    <p className="font-bold text-xl">Hayra</p>
-                </div>
-                <div className="font-bold text-neutral-700 flex flex-col border-t border-b my-16">
-                    <div className="text-sm flex gap-4 items-center p-4 cursor-pointer hover:bg-white border-transparent border-l-4 hover:border-neutral-800">
-                        <Briefcase size={20}/>
-                        <p>Resources</p>
-                    </div>
-                    <div className="text-sm flex gap-4 items-center p-4 cursor-pointer hover:bg-white border-transparent border-l-4 hover:border-neutral-800">
-                        <BookText  size={20}/>
-                        <p>Blogs</p>
-                    </div>
-                    <div className="text-sm flex gap-4 items-center p-4 cursor-pointer hover:bg-white border-transparent border-l-4 hover:border-neutral-800">
-                        <MessagesSquare  size={20}/>
-                        <p>Forums</p>
-                    </div>
-                </div>
-            </div>
-            <div className="grow h-[300vh] ml-48 py-4 relative">
-                <div className="pl-48 fixed w-full flex left-0 top-0 py-6 custom-filter bg-white justify-between">
-                    <div className="px-2 bg-white mx-6 relative text-gray-600 border rounded-md w-96 overflow-hidden flex items-center">
-                        <input
-                            className="w-full h-10 text-sm focus:outline-none"
-                            type="search"
-                            name="search"
-                            placeholder="Search"
-                        />
-                        <div className="text-neutral-400">
-                            <Search/>
-                        </div>
-                    </div>
-                    <div>
-                        <p>toky</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    );
+  return (
+    <div className="relative grid grid-cols-2 gap-3">
+      <Resource/>
+      <Resource/>
+      <Resource/>
+      <Resource/>
+      <Resource/>
+    </div>
+  );
 };
+
+function Resource() {
+  return (
+    <div className="flex gap-3 max-w-3xl h-min p-2 hover:bg-neutral-100 cursor-pointer rounded-md border">
+      <div className="aspect-video bg-blue-400 w-64 relative">
+        <Image objectFit={"cover"} fill src={"https://d2r55xnwy6nx47.cloudfront.net/uploads/2022/02/Andre-Oort-520x292-520x292.jpg"} alt={""}/>
+      </div>
+      <div className="flex flex-col">
+        <div className="flex text-neutral-400 items-center justify-between">
+          <h2 className="font-bold text-lg text-neutral-800">Number Theory</h2>
+          <FileText size={14}/>
+        </div>
+        <p className="text-sm text-neutral-600">
+          Number theory is a branch of mathematics that deals with the properties and relationships
+        </p>
+       <div className="flex justify-between items-end py-1">
+         <div className="flex flex-wrap gap-1 mt-auto">
+           <span className="bg-blue-50 p-1 text-xs rounded-md flex items-center justify-center leading-3">Math</span>
+           <span className="bg-blue-50 p-1 text-xs rounded-md flex items-center justify-center leading-3">NumberTheory</span>
+           <span className="bg-blue-50 p-1 text-xs rounded-md flex items-center justify-center leading-3">MathNerd</span>
+         </div>
+         <div className="text-neutral-400 text-xs underline">
+           By noface , <span className="italic">12-02-2025</span>
+         </div>
+       </div>
+      </div>
+    </div>
+  )
+}
 
 export default Page;
