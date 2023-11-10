@@ -2,6 +2,8 @@ import * as React from "react";
 import { User } from "./user";
 import { ModeToggle } from "./modeToggle";
 import { Input } from "../ui/input";
+import Image from "next/image";
+import Link from "next/link";
 
 const links = [
   {
@@ -27,10 +29,18 @@ const Navbar = () => {
       <div className="container mx-auto px-6">
         <div className="mx-auto">
           <div className="flex w-full items-center justify-between gap-5">
-            <div className="text-2xl">
-              {/* <Image src={Logo} alt="Logo" className="w-16" /> */}
-              <p>Logo</p>
-            </div>
+            <Link href="/" className="flex items-center gap-4">
+              <div className="w-10">
+                <Image
+                  className="h-auto w-full"
+                  width={200}
+                  height={200}
+                  src={"/assets/logoDark.svg"}
+                  alt={""}
+                />
+              </div>
+              <p className="text-xl font-bold">Hayra</p>
+            </Link>
 
             <div className="flex items-center gap-8">
               <div>
