@@ -7,10 +7,10 @@ const Contact = () => {
           <div className="flex flex-wrap">
             <div className="mb-10 w-full shrink-0 grow-0 basis-auto md:mb-0 md:w-6/12 md:px-3 lg:px-6">
               <h2 className="font-bol mb-6 text-3xl">Contact us</h2>
-              <p className="mb-6">
+              <div className="mb-6">
                 <p className="mb-3 font-semibold">
                   {" "}
-                  We'd Love to Hear From You!
+                  We&apos;d Love to Hear From You!
                 </p>
 
                 <p>
@@ -19,7 +19,7 @@ const Contact = () => {
                   team is here to assist you and ensure your experience with us
                   is nothing short of exceptional.
                 </p>
-              </p>
+              </div>
               <p className="mb-2 text-neutral-800">
                 Antananarivo, 101, Madagascar
               </p>
