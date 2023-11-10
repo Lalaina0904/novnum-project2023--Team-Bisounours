@@ -14,7 +14,7 @@ const Contact = () => {
               </p>
 
               <p className="mb-8 text-lg font-medium text-gray-700">
-                you'll uncover a wealth of educational resources meticulously
+                you&apos;ll uncover a wealth of educational resources meticulously
                 selected to ignite your personal and academic development. We
                 believe in the transformational potential of knowledge and
                 learning.
@@ -39,7 +39,7 @@ const Contact = () => {
               <p className="mb-8 text-lg font-medium text-gray-700">
                 Join our platform, where we encourages teachers to share their
                 valuable teaching materials. Together, we can enhance
-                educational standards to make a real impact on their students'
+                educational standards to make a real impact on their students&apos;
                 lives.
               </p>
 

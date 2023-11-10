@@ -33,7 +33,7 @@ const Page = () => {
                 <p className="font-mono">
                     Machine learning, a subset of artificial intelligence, is revolutionizing the way we interact with
                     technology and data. It has become an integral part of our daily lives, from virtual assistants like
-                    Siri and Alexa to personalized product recommendations on e-commerce websites. In this blog, we'll
+                    Siri and Alexa to personalized product recommendations on e-commerce websites. In this blog, we &apos; ll
                     embark on a journey to explore the captivating world of machine learning, its fundamental concepts,
                     real-world applications, and the incredible potential it holds for the future.
                 </p>

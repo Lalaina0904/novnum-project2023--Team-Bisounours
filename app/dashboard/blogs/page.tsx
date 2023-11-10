@@ -75,7 +75,7 @@ type IBlog = {
     tag: string[]
 }
 
-export function Blog({title, author, authorPic, comment, date, hearth , tag}: IBlog) {
+function Blog({title, author, authorPic, comment, date, hearth , tag}: IBlog) {
     return (
         <Link
             href={"/dashboard/blogs/blog"}
