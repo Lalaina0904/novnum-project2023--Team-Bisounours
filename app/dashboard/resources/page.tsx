@@ -1,54 +1,92 @@
 // @flow
 import * as React from "react";
-import { Briefcase, BookText, MessagesSquare, Search, LogOut, FileText, Plus, File } from "lucide-react";
+import {Briefcase, BookText, MessagesSquare, Search, LogOut, FileText, Video , Link , Computer , Plus, File} from "lucide-react";
 import Image from "next/image";
 
 const Page = () => {
-  return (
-    <div>
-      <div className="flex justify-end mb-6">
-        <div className="w-max p-3 bg-neutral-800 rounded-md flex gap-1 items-center text-white cursor-pointer">
-          <p className="text-sm font-bold font-mono">Add Resources</p>
-          <Plus size={18}/>
+    return (
+        <div>
+            <div className="flex justify-end mb-6 gap-2 flex-wrap">
+                <div
+                    className="px-2 mr-auto grow bg-white relative text-gray-600 border rounded-md max-w-md overflow-hidden flex items-center">
+                    <input
+                        className="w-full h-10 text-sm focus:outline-none"
+                        type="search"
+                        name="search"
+                        placeholder="Search"
+                    />
+                    <div className="text-neutral-400">
+                        <Search/>
+                    </div>
+                </div>
+                <div
+                    className="w-max p-3 bg-neutral-50 rounded-md text-sm flex gap-1 items-center cursor-pointer text-neutral-800 border border-neutral-300">
+                    <p className="text-xm font-bold font-mono">Add Resources</p>
+                    <Plus size={18}/>
+                </div>
+            </div>
+
+            <div className="relative gap-4 grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+                <Resource
+                    fileName={"Imaginary Number"}
+                    author={"Pr Proton"}
+                    tag={["math" , "number"]}
+                    date={"9 Nov 2023"}
+                    type={"software"}
+                    description={"Learn Complex number the easy ay with this doc"}
+                 />
+            </div>
         </div>
-      </div>
-      <div className="relative flex flex-col gap-2">
-        <Resource/>
-        <Resource/>
-        <Resource/>
-        <Resource/>
-        <Resource/>
-      </div>
-    </div>
-  );
+    );
 };
 
-function Resource() {
-  return (
-    <div className="flex gap-3 h-min p-2 hover:bg-neutral-100 cursor-pointer rounded-md border">
-      <div className="relative text-neutral-400">
-        <File/>
-      </div>
-      <div className="flex grow items-center">
-        <div className="flex text-neutral-400 items-center justify-between mr-auto">
-          <h2 className="font-bold text-lg text-neutral-800">Number Theory</h2>
+type IResource = {
+    type: "document" | "video" | "link" | "software",
+    fileName: string,
+    description: string,
+    author: string,
+    date: string,
+    tag: string[]
+}
+
+function Resource({type, fileName, author, description, tag, date}: IResource) {
+    return (
+        <div className="flex gap-3 h-min p-2 hover:bg-neutral-100 cursor-pointer rounded-md border items-start">
+            <div
+                className="relative aspect-square p-3 bg-neutral-200 rounded-md flex items-center justify-center text-neutral-600">
+                {
+                    type === "document" && <File absoluteStrokeWidth size={18}/> ||
+                    type === "link" && <Link absoluteStrokeWidth size={18}/> ||
+                    type === "video" && <Video absoluteStrokeWidth size={18}/> ||
+                    type === "software" && <Computer absoluteStrokeWidth size={18}/>
+                }
+            </div>
+            <div className="flex flex-col grow gap-2">
+                <div className="flex text-neutral-400 items-center justify-between mr-auto">
+                    <h2 className="font-bold text-lg text-neutral-800">{fileName}</h2>
+                </div>
+                <p className="text-sm text-neutral-600">
+                    {description}
+                </p>
+                <div className="gap-2 flex flex-wrap">
+                    <div className="flex flex-wrap gap-1">
+                        {
+                            tag.map((tag , index) => (
+                                <span
+                                    key={index}
+                                    className="bg-blue-50 p-1 text-xs rounded-md flex items-center justify-center leading-3">
+                                    {tag}
+                                </span>
+                            ))
+                        }
+                    </div>
+                    <div className="text-neutral-400 text-xs underline flex ml-auto">
+                        {author} , <span className="italic">{date}</span>
+                    </div>
+                </div>
+            </div>
         </div>
-        <p className="text-sm text-neutral-600">
-          Number theory is a branch of mathematics that deals with the properties and relationships
-        </p>
-       <div className="flex flex-wrap items-center gap-2">
-         <div className="flex flex-wrap gap-1">
-           <span className="bg-blue-50 p-1 text-xs rounded-md flex items-center justify-center leading-3">Math</span>
-           <span className="bg-blue-50 p-1 text-xs rounded-md flex items-center justify-center leading-3">NumberTheory</span>
-           <span className="bg-blue-50 p-1 text-xs rounded-md flex items-center justify-center leading-3">MathNerd</span>
-         </div>
-         <div className="text-neutral-400 text-xs underline grow justify-end flex">
-           By noface , <span className="italic">12-02-2025</span>
-         </div>
-       </div>
-      </div>
-    </div>
-  )
+    )
 }
 
 export default Page;
