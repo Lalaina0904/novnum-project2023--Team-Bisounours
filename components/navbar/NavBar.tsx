@@ -1,6 +1,7 @@
 import * as React from "react";
 import { User } from "./user";
 import { ModeToggle } from "./modeToggle";
+import { Input } from "../ui/input";
 
 const links = [
   {
@@ -22,7 +23,7 @@ const links = [
 
 const Navbar = () => {
   return (
-    <nav className="ease-in-outs custom-filter border-accent md:bg-background/90 sticky top-0 z-30 w-full border-b py-4 transition duration-300">
+    <nav className="ease-in-outs custom-filter sticky top-0 z-30 w-full border-b border-accent py-4 transition duration-300 md:bg-background/90">
       <div className="container mx-auto px-6">
         <div className="mx-auto">
           <div className="flex w-full items-center justify-between gap-5">
@@ -33,13 +34,8 @@ const Navbar = () => {
 
             <div className="flex items-center gap-8">
               <div>
-                <div className="relative mx-auto pt-2 text-gray-600">
-                  <input
-                    className="bg-accent h-10 rounded-[1rem] px-5 pr-16 text-sm focus:outline-none"
-                    type="search"
-                    name="search"
-                    placeholder="Search"
-                  />
+                <div className="relative mx-auto pt-2">
+                  <Input placeholder="Search" name="search" />
                 </div>
               </div>
 

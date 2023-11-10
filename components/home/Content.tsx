@@ -1,8 +1,7 @@
 "use client";
 
-import React, { useRef, useState } from "react";
+import React from "react";
 
-import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 
@@ -43,7 +42,7 @@ const content2 = () => {
     <div>
       <div>
         Discussion forums allow users to ask questions, share ideas and discuss
-        educational topics. It's a space where learners and educators can
+        educational topics. It&apos;s a space where learners and educators can
         collaborate to solve problems.
       </div>
 
