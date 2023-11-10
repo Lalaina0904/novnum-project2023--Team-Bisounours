@@ -27,10 +27,10 @@ export const Heading = () => {
                 </span>
               </h1>
 
-              <h2 className="mb-6 w-4/5 text-[1.8rem] font-semibold text-gray-600 md:py-8 ">
+              <h2 className="mb-6 w-4/5 text-[1.8rem] font-semibold text-gray-600 dark:text-gray-300 md:py-8">
                 We are focused on a collective intelligence approach
               </h2>
-              <p className="mb-16 text-xl font-semibold leading-8 text-gray-900 opacity-60 lg:mb-32 ">
+              <p className="mb-16 text-xl font-semibold leading-8 text-gray-700 opacity-60 dark:text-white lg:mb-32">
                 We promote collaboration, sharing, and co-creation of
                 educational resources, placing the human element at the center
                 of our approach to develop the education sector in Madagascar.
@@ -45,7 +45,7 @@ export const Heading = () => {
                   type="button"
                   data-te-ripple-init
                   data-te-ripple-color="light"
-                  className="pb-2s mb-6 inline-block w-2/5 border-[0.2rem] border-[#477cad] bg-transparent px-6 py-2.5 font-semibold uppercase leading-normal text-[#2e587e] transition duration-150 ease-in-out"
+                  className="pb-2s mb-6 inline-block w-2/5 border-[0.2rem] border-[#477cad] bg-transparent px-6 py-2.5 font-semibold uppercase leading-normal text-[#2e587e] transition duration-150 ease-in-out dark:text-[#6ea3d5]"
                 >
                   <a href="#">LEARN MORE</a>
                 </button>
@@ -54,7 +54,7 @@ export const Heading = () => {
                   type="button"
                   data-te-ripple-init
                   data-te-ripple-color="light"
-                  className="pb-2s mb-6 inline-block px-6 py-2.5 font-semibold uppercase leading-normal text-[#2e587e] transition duration-150 ease-in-out"
+                  className="pb-2s mb-6 inline-block px-6 py-2.5 font-semibold uppercase leading-normal text-[#2e587e] transition duration-150 ease-in-out dark:text-[#6ea3d5]"
                 >
                   <a href="#" className="flex items-center gap-4">
                     Our Services <BsArrowRight className="text-xl" />
