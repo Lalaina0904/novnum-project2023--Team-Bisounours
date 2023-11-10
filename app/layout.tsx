@@ -17,7 +17,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="min-h-full">
+    <html lang="en" suppressHydrationWarning>
       <body className={"min-h-screen"}>
         <ThemeProvider
           enableSystem
