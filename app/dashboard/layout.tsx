@@ -1,7 +1,7 @@
 'use client'
 
 import React, {MouseEventHandler, useEffect, useState} from "react";
-import { BookText, Briefcase, LogOut, MessagesSquare, Search , Plus } from "lucide-react";
+import {BookText, Briefcase, LogOut, MessagesSquare, Search, Plus, Home} from "lucide-react";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
@@ -17,7 +17,7 @@ export default function ProductDetailLayout({ children }: {
         <div className="fixed bottom-0 z-20 flex flex-col gap-4 w-full px-4 py-6 sm:hidden cursor-pointer">
           <MobileNavigation/>
         </div>
-        <div className="fixed h-screen w-48 bg-opacity-100 py-10 border-r bg-neutral-50 flex-col hidden md:flex">
+        <div className="fixed h-screen w-48 bg-opacity-100 border-r bg-neutral-50 flex-col hidden md:flex">
           <div className="font-bold text-neutral-700 flex flex-col my-10">
             <NavItem link={"/dashboard/resources"} label={"Resources"} Icon={<Briefcase size={20}/>}/>
             <NavItem link={"/dashboard/blogs"} label={"Blogs"} Icon={<BookText  size={20}/>}/>
@@ -31,26 +31,26 @@ export default function ProductDetailLayout({ children }: {
           </div>
         </div>
 
-        <div className="grow relative pt-24 px-4 md:ml-48" id="content">
-          <div className="px-4 fixed w-full flex left-0 top-0 py-3 custom-filter bg-white  z-50">
-            <div className="flex items-center gap-4">
-              <div className="w-10">
-                <Image
-                  className="w-full h-auto"
-                  width={200} height={200}
-                  src={"/assets/logoDark.svg"}
-                  alt={""}
-                />
-              </div>
-              <p className="font-bold text-xl">Hayra</p>
-            </div>
+        <div className="grow relative py-14 px-4 md:ml-48" id="content">
+          {/*<div className="px-4 fixed w-full flex left-0 top-0 py-3 custom-filter bg-white  z-50">*/}
+          {/*  <div className="flex items-center gap-4">*/}
+          {/*    <div className="w-10">*/}
+          {/*      <Image*/}
+          {/*        className="w-full h-auto"*/}
+          {/*        width={200} height={200}*/}
+          {/*        src={"/assets/logoDark.svg"}*/}
+          {/*        alt={""}*/}
+          {/*      />*/}
+          {/*    </div>*/}
+          {/*    <p className="font-bold text-xl">Hayra</p>*/}
+          {/*  </div>*/}
 
-            <div className="ml-auto">
-              <div className="w-10 aspect-square rounded-full overflow-hidden border-2 bg-white">
-                <Image width={200} height={200} src={"https://avatars.githubusercontent.com/u/69815340?v=4"} alt={""}/>
-              </div>
-            </div>
-          </div>
+          {/*  <div className="ml-auto">*/}
+          {/*    <div className="w-10 aspect-square rounded-full overflow-hidden border-2 bg-white">*/}
+          {/*      <Image width={200} height={200} src={"https://avatars.githubusercontent.com/u/69815340?v=4"} alt={""}/>*/}
+          {/*    </div>*/}
+          {/*  </div>*/}
+          {/*</div>*/}
           {children}
         </div>
       </div>
@@ -71,7 +71,7 @@ function NavItem({label , Icon , link} : INavItem){
   const pathname = usePathname()
 
   useEffect(() => {
-    pathname.includes(link)  ? setIsVisited(true) : setIsVisited(false);
+    pathname.endsWith(link)  ? setIsVisited(true) : setIsVisited(false);
   }, [link, pathname])
 
 

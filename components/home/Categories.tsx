@@ -3,7 +3,7 @@ import Btn from "../ui/Btn";
 
 const Contact = () => {
   return (
-    <div className="container mx-auto my-16 px-0">
+    <div className="container mx-auto my-16 px-6">
       <div className="mb-32">
         <div className="flex flex-wrap">
           <div className="mb-12 w-full shrink-0 grow-0 basis-auto md:mb-0 md:w-6/12 md:pe-3 lg:pe-6">

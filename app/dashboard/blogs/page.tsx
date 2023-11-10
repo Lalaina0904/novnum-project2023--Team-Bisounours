@@ -12,6 +12,7 @@ import {
     Bookmark, Plus, Pencil
 } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link"
 
 const Page = () => {
     return (
@@ -40,9 +41,25 @@ const Page = () => {
             <Blog author={"Ein"}
                   authorPic={"https://avatars.githubusercontent.com/u/69815340?v=4"}
                   date={"Nov 8 (25min ago)"}
-                  tag={["Math", "computer Science"]}
+                  tag={["machine learning", "artificial intelligence", "data science"]}
                   comment={20}
-                  title={"Design Tokens: Cool Philosophy, Cumbersome Experience"}
+                  title={"Exploring the World of Machine Learning"}
+                  hearth={10}/>
+
+            <Blog author={"Ein"}
+                  authorPic={"https://avatars.githubusercontent.com/u/69815340?v=4"}
+                  date={"Nov 8 (25min ago)"}
+                  tag={["machine learning", "artificial intelligence", "data science"]}
+                  comment={20}
+                  title={"Mastering the Art of Digital Photography"}
+                  hearth={10}/>
+
+            <Blog author={"Ein"}
+                  authorPic={"https://avatars.githubusercontent.com/u/69815340?v=4"}
+                  date={"Nov 8 (25min ago)"}
+                  tag={["blockchain", "cryptocurrency", "decentralized"]}
+                  comment={20}
+                  title={"Demystifying Blockchain Technology"}
                   hearth={10}/>
         </div>
     );
@@ -58,9 +75,11 @@ type IBlog = {
     tag: string[]
 }
 
-function Blog({title, author, authorPic, comment, date, hearth , tag}: IBlog) {
+export function Blog({title, author, authorPic, comment, date, hearth , tag}: IBlog) {
     return (
-        <div className="border bg-neutral-50 p-4 rounded-md flex flex-col gap-6">
+        <Link
+            href={"/dashboard/blogs/blog"}
+            className="border bg-neutral-50 p-4 rounded-md flex flex-col gap-6">
             <div className="flex gap-2">
                 <div
                     className="w-12 aspect-square bg-white rounded-full overflow-hidden border-2 flex items-center justify-center">
@@ -101,7 +120,7 @@ function Blog({title, author, authorPic, comment, date, hearth , tag}: IBlog) {
                     <Bookmark absoluteStrokeWidth size={20}/>
                 </div>
             </div>
-        </div>
+        </Link>
     )
 }
 
