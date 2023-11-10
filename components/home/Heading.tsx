@@ -11,7 +11,7 @@ export const Heading = () => {
         <header className="flex flex-col items-center px-6">
           <motion.div
             className="container z-[1] mx-auto flex grow px-2 md:py-[64px] lg:py-[96px]"
-            initial={{ opacity: 0, y: 100 }}
+            initial={{ opacity: .25, y: 100 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 100 }}
             transition={{ duration: 0.5, delay: 0.1 }}
