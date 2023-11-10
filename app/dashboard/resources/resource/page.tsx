@@ -12,7 +12,7 @@ const Page = () => {
       <div className="flex flex-col text-md">
        <p>
          Number theory is a branch of mathematics that deals with the properties and relationships of numbers,
-         particularly integers. It's one of the oldest and most fundamental areas of mathematics. Number theory explores
+         particularly integers. It&apos;s one of the oldest and most fundamental areas of mathematics. Number theory explores
          questions related to prime numbers, divisibility, congruence, and more.
        </p>
       </div>

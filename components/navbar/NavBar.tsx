@@ -25,7 +25,7 @@ const links = [
 
 const Navbar = () => {
   return (
-    <nav className="ease-in-outs custom-filter sticky top-0 z-30 w-full border-b border-accent py-4 transition duration-300 md:bg-background/90">
+    <nav className="ease-in-outs custom-filter sticky top-0 z-30 w-full border-b border-accent py-3 transition duration-300 md:bg-background/90">
       <div className="container mx-auto px-6">
         <div className="mx-auto">
           <div className="flex w-full items-center justify-between gap-5">

@@ -17,7 +17,7 @@ const Page = () => {
       </div>
       <div className="flex flex-col gap-2">
         <h2 className="italic font-bold">About</h2>
-        <p className="font-mono text-neutral-500">Hey there, I'm just a lambda human who love sitting next to a computer all day and expect making some new friend :d</p>
+        <p className="font-mono text-neutral-500">Hey there, I&apos;m just a lambda human who love sitting next to a computer all day and expect making some new friend :d</p>
       </div>
 
       <div className="flex flex-col gap-2">

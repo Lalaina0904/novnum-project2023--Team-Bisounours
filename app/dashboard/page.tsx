@@ -1,3 +1,5 @@
+
+
 // @flow
 import * as React from "react";
 import {
@@ -10,17 +12,13 @@ import {
 } from "lucide-react";
 import Image from "next/image";
 import { Badge } from "@/components/ui/badge";
+import { redirect } from 'next/navigation'
+
 
 const Page = () => {
-  return (
-    <div className="relative grid grid-cols-2 gap-4">
-      <Resource />
-      <Resource />
-      <Resource />
-      <Resource />
-      <Resource />
-    </div>
-  );
+
+  redirect('/dashboard/resources')
+
 };
 
 function Resource() {

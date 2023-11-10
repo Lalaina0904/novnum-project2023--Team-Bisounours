@@ -8,9 +8,9 @@ export const Heading = () => {
   return (
     <>
       <AnimatePresence>
-        <header className="flex h-[85vh] flex-col items-center">
+        <header className="flex flex-col items-center px-6">
           <motion.div
-            className="container z-[1] mx-auto flex grow items-center px-2 md:py-[64px] lg:py-[96px]"
+            className="container z-[1] mx-auto flex grow px-2 md:py-[64px] lg:py-[96px]"
             initial={{ opacity: 0, y: 100 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 100 }}
@@ -65,7 +65,7 @@ export const Heading = () => {
 
             <div className="relative hidden h-full w-2/5 justify-center lg:flex">
               <Image
-                className="heroImg absolute top-[4rem]"
+                className="heroImg absolute top-0"
                 src="/images/hero-img.png"
                 alt={"hero-img"}
                 layout="responsive"
