@@ -81,8 +81,8 @@ type ContentProps = {
 const Slide = ({ subtitle, children }: ContentProps) => {
   return (
     <div className={` bg-[#eff4fa] py-12`}>
-      <div className="">
-        <div className="info flex flex-col justify-center px-[3rem] lg:px-[8rem]">
+      <div className="container mx-auto">
+        <div className="info flex flex-col justify-center">
           <div className="title">
             <a className="text-3xl font-bold text-gray-800 hover:text-gray-600 md:text-4xl">
               {subtitle}
