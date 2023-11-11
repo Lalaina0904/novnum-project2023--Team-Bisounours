@@ -39,7 +39,7 @@ const Navbar = () => {
                   alt={""}
                 />
               </div>
-              <p className="text-xl font-bold">Hayra</p>
+              <p className="title hidden text-xl font-bold md:block">Hayra</p>
             </Link>
 
             <div className="flex items-center gap-8">
