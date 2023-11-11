@@ -21,9 +21,9 @@ export default withAuth(
   {
     pages: {
       signIn: "/login",
-      newUser: "/register",
-    },
-  },
+      newUser: "/register"
+    }
+  }
 );
 
 export const config = {
